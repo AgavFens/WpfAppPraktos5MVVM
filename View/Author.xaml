@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfAppPraktos5MVVM.ViewModel.Author"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppPraktos5MVVM.ViewModel"
+        mc:Ignorable="d"
+        Title="Author" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+        <Button Content="Имена наших курсоров 0_0" x:Name="Kursor" Background="BurlyWood" Click="Kursor_Click" Grid.Row="0" Height="50" Width="300"/>
+        <Button Content="Признанение автора (ЗАСЕКРЕЧЕНО)" x:Name="secret" Background="BurlyWood" Click="secret_Click" Grid.Row="1" Height="50" Width="300"/>
+        <Button Content="Кликер" x:Name="clicker" Background="BurlyWood" Click="Clicker_Click" Grid.Row="2" Height="50" Width="300" />
+        <TextBox x:Name="Password" MaxWidth="300" Background="Wheat" BorderBrush="Black" Grid.Row="4" Height="18" Width="300"/>
+    </Grid>
+</Window>
