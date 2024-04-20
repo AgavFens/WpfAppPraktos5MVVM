@@ -19,32 +19,10 @@ namespace WpfAppPraktos5MVVM.ViewModel
 { 
     public partial class Author : Window
     {
-        Clicker clickerbutton = new Clicker();
-        Secret secretbutton = new Secret();
-        MainWindow mainwindow = new MainWindow();
-        string parol = "Секрет";
         public Author()
         {
             InitializeComponent();
-        }
-        private void Clicker_Click(object sender, RoutedEventArgs e)
-        {
-            clickerbutton.Show();
-            Close();
-        }
-
-        private void secret_Click(object sender, RoutedEventArgs e)
-        {
-            if (parol == Password.Text)
-            {
-                secretbutton.Show();
-                Close();
-            }
-        }
-        private void Kursor_Click(object sender, RoutedEventArgs e)
-        {
-            mainwindow.Show();
-            Close();
+            DataContext = new AuthorViewModel(this);
         }
     }
 }

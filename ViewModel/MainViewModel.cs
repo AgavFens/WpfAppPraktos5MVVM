@@ -13,7 +13,7 @@ namespace WpfAppPraktos5MVVM.ViewModel
 {
     internal class MainViewModel : BindingHelper
     {
-        private ClickerVid selected;
+        private ClickerVid selected = new ClickerVid();
         public ClickerVid Selected
         {
             get { return selected; }

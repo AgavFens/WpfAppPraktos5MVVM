@@ -15,5 +15,7 @@ namespace WpfAppPraktos5MVVM
         }
         public string Name { get; set; }
         public string Color { get; set; }
+
+        public ClickerVid() { }
     }
 }

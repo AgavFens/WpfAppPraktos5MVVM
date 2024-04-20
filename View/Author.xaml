@@ -13,9 +13,19 @@
             <RowDefinition Height="62*"/>
             <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
-        <Button Content="Имена наших курсоров 0_0" x:Name="Kursor" Background="BurlyWood" Click="Kursor_Click" Grid.Row="0" Height="50" Width="300"/>
-        <Button Content="Признанение автора (ЗАСЕКРЕЧЕНО)" x:Name="secret" Background="BurlyWood" Click="secret_Click" Grid.Row="1" Height="50" Width="300"/>
-        <Button Content="Кликер" x:Name="clicker" Background="BurlyWood" Click="Clicker_Click" Grid.Row="2" Height="50" Width="300" />
-        <TextBox x:Name="Password" MaxWidth="300" Background="Wheat" BorderBrush="Black" Grid.Row="4" Height="18" Width="300"/>
+        <Button Content="Имена наших курсоров 0_0" x:Name="Kursor" Background="BurlyWood" Grid.Row="0" Height="50" Width="300" Command="{Binding Kursor}"/>
+        <Button Content="Признанение автора (ЗАСЕКРЕЧЕНО)" x:Name="secret" Background="BurlyWood" Grid.Row="1" Height="50" Width="300" Command="{Binding Secret}"/>
+        <Button Content="Кликер" x:Name="clicker" Background="BurlyWood" Grid.Row="2" Height="50" Width="300" Command="{Binding Clicker}" />
+        <TextBox Text="{Binding Password}" MaxWidth="300" Background="Wheat" BorderBrush="Black" Grid.Row="4" Height="18" Width="300"/>
+        <DataGrid CanUserAddRows="False" ItemsSource="{Binding Clickervid}" SelectedItem="{Binding Selected}" Margin="797,0,0,92" RenderTransformOrigin="0.5,0.5">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
     </Grid>
 </Window>

@@ -27,8 +27,27 @@ namespace WpfAppPraktos5MVVM.View
 
         private void Click_Click(object sender, RoutedEventArgs e)
         {
-            money++;
-            Label1.Text = $"Деньги: {money}$";
+            money = money + multi;
+            Label1.Content = $"Деньги: {money}$";
         }
+
+        private void upgrade_Click(object sender, RoutedEventArgs e)
+        {
+            if (money > upgradecost - 1)
+            {
+                money = money - upgradecost;
+                Label1.Content = $"Деньги: {money}$";
+                upgradecost++;
+                Label2.Content = $"Количество прокачек кликов: {upgradecost}";
+                upgradecost = upgradecost * 2;
+                Label3.Content = $"Стоимость прокачки: {upgradecost}$";
+                Label4.Content = $"Деньги за клик: {multi}";
+            }
+            else
+            {
+                MessageBox.Show("Нет денег", "ошибка");
+            }
+        }
+
     }
 }
